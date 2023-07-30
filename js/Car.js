@@ -17,6 +17,9 @@ class Car {
         this.ctx.drawImage(image, this.x, this.y, this.w, this.h);
         // }
     }
+    setV() {
+        this.v = v;
+    }
     moveRight() {
         this.x += this.v;
     }
@@ -24,10 +27,10 @@ class Car {
         this.x -= this.v;
     }
     checkCollisionBorder() {
-        if (this.x < 0) {
-            this.x = 0;
-        } else if (this.x > this.canvas.width - this.w) {
-            this.x = this.canvas.width - this.w;
+        if (this.x < this.w) {
+            this.x = this.w;
+        } else if (this.x > this.canvas.width - 2*this.w) {
+            this.x = this.canvas.width - 2*this.w;
         }
     }
     checkCollisionEnemyCar(car) {

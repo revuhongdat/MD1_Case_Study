@@ -9,18 +9,29 @@
     <style>
       #start {
         position: relative;
-        left: 500px;
-        top: 250px;
-        width: 100px;
+        left: 250px;
+        top: 400px;
+        width: 120px;
         height: 50px;
         font-family: 'Press Start 2P', cursive;
         border-radius: 25px;
       }
+      #restart {
+        position: relative;
+        left: 250px;
+        top: 450px;
+        width: 120px;
+        height: 50px;
+        font-family: 'Press Start 2P', cursive;
+        border-radius: 25px;
+        display: none;
+      }
     </style>
   </head>
   <body>
-  <div ><button id='start' onclick="autoMove()">START</button></div>
-  <div style="text-align: left"><canvas id="myCanvas" width="650px" height="500px" style="border: 5px solid #f50505;background-color:#83858f"></canvas></div>
+  <div style="text-align: left;position: absolute"><canvas id="myCanvas" width="600px" height="800px" style="border: 5px solid #f50505;background-color:#919ac7"></canvas></div>
+  <div ><button id='start' onclick="startGame()">START</button></div>
+  <div ><button id='restart' onclick="restart()">RESTART</button></div>
   <script src="js/Car.js"></script>
   <script src="js/EnemyCar.js"></script>
   <script src="js/Score.js"></script>
